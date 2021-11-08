@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js_clock.css">
+
+</head>
+
+<body id="mybody">
+    <div class="navbar">
+        <a href="#" class="mynav">Home</a>
+        <a href="#alarm_clock" class="mynav">Alarms</a>
+        <a href="#param" class="mynav">World Clock</a>
+    </div>
+    <div id="mode">
+        <img src="https://cdn4.iconfinder.com/data/icons/multimedia-flat-30px/30/sun_light_mode_day-512.png" alt="lightmode" id="lightmode">
+        <span id="msg_light">
+            Switch to light mode
+        </span>
+    </div>
+    <div id="mode_">
+        <img src="data:image/png;base64,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" alt="lightmode" id="darkmode">
+        <span id="msg_dark">
+            Switch to Dark mode
+        </span>
+    </div>
+
+    <div class="searchbar">
+        <input type="search" name="Search" id="search">
+        <button id="btn" placeholder="Search">Search</button>
+    </div>
+    <hr>
+
+    <!-- <span id="msg_light">
+        Switch to light mode
+    </span> -->
+    <br>
+    <!-- <div class="head1"><h1>PHOENIX TIME ZONES</h1></div> -->
+    <div class="firstdiv">
+        <div class="orange_dabba"></div>
+        <div class="green_dabba"></div>
+        <div class="clockcontainer" id="cct">
+            <!-- <h1>Current Time is:  <span id="time"></span></h1> -->
+            <div id="small_weekday"></div>
+            <div class="weekdays" id="weekdays">
+                <span id="sun">SUN</span>&nbsp;
+                <span id="mon">MON</span>&nbsp;
+                <span id="tue">TUE</span>&nbsp;
+                <span id="wed">WED</span>&nbsp;
+                <span id="thu">THU</span>&nbsp;
+                <span id="fri">FRI</span>&nbsp;
+                <span id="sat">SAT</span>&nbsp;
+            </div>
+            <!-- <span id="time"></span> -->
+            <div class="curr_time" id="curr_time">
+                <div id="hrs"></div><span class="dot" id="d1">:</span>
+                <div id="mins"></div><span class="dot" id="d2">:</span>
+                <div id="secs"></div>
+            </div>
+            <div class="date_" id="date_">
+                <h1>Date: </h1>
+                <span id="date"></span>
+            </div>
+            <!-- <hr id="divHR"> -->
+        </div>
+    </div>
+    <!-- <div class="showmore">
+        <button id="showbtn" onclick="show()">Explore</button>
+    </div> -->
+    <!-- <div id="newclocks">
+        <div class="close" id="close" onclick="cls()">
+            <div id="c1"></div>
+            <div id="c2"></div>
+        </div>
+        <div class="innerdiv">
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </div>
+    </div> -->
+
+    <br><br><br>
+    <hr><br><br><br>
+
+    <div class="world_back">
+        <span id="w1"></span>
+        <span id="w2"></span>
+        <span id="w3"></span>
+        <span id="w4"></span>
+        <span id="w5"></span>
+    </div>
+    <div class="world_container", id="param">
+        <div class="world_container_innerdiv" id="us_time">
+            <div class="inner_part_2" id="inner_wc">
+                <!-- <span id="al_1"></span>
+                <span id="al_2"></span>
+                <span id="al_3"></span>
+                <span id="al_4"></span> -->
+                <div class="heading">
+                    <h1>AMERICA</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="us_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="us_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="us_secs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="world_container_innerdiv" id="aus_time">
+            <div class="inner_part_2" id="inner_wc">
+                <div class="heading">
+                    <h1>AUSTRALIA</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="aus_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="aus_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="aus_secs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="world_container_innerdiv" id="london_time">
+            <div class="inner_part_2" id="inner_wc">
+                <div class="heading">
+                    <h1>LONDON</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="lon_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="lon_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="lon_secs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="world_container_innerdiv" id="japan_time">
+            <div class="inner_part_2" id="inner_wc">
+                <div class="heading">
+                    <h1>JAPAN</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="jap_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="jap_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="jap_secs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="world_container_innerdiv" id="dubai_time">
+            <div class="inner_part_2" id="inner_wc">
+                <div class="heading">
+                    <h1>DUBAI</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="dub_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="dub_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="dub_secs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="world_container_innerdiv" id="unk_time">
+            <div class="inner_part_2" id="inner_wc">
+                <div class="heading">
+                    <h1>CANADA</h1>
+                </div>
+                <div class="curr_us_time">
+                    <div class="world_time_small_divs" id="unk_hrs"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs" id="unk_mins"></div><span class="dot_us">:</span>
+                    <div class="world_time_small_divs_" id="unk_secs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <hr><br><br><br>
+
+    <!-- alarm clock -->
+    <!-- balls effect when alarm rings-->
+    <div id="glowing">
+        <span id="ball1"></span>
+        <span id="ball2"></span>
+        <span id="ball3"></span>
+        <span id="ball4"></span>
+        <span id="ball5"></span>
+        <span id="ball6"></span>
+        <span id="ball7"></span>
+        <span id="ball8"></span>
+        <span id="ball9"></span>
+        <span id="ball10"></span>
+    </div>
+
+    <!-- alarm clock background -->
+    <div class="alarm_back">
+        <span id="b1"></span>
+        <span id="b2"></span>
+        <span id="b3"></span>
+        <span id="b4"></span>
+    </div>
+    <div class="secondary">
+        <div class="head2">
+            <h1>PHEONIX ALARM CLOCK</h1>
+        </div>
+
+        <div id="alarm_clock" class="alarm_box">
+            <!-- <span id="al_1"></span>
+            <span id="al_2"></span>
+            <span id="al_3"></span>
+            <span id="al_4"></span> -->
+            <!-- <h1>Set your Alarm here: <br><hr></h1> -->
+            <div class="myform">
+                <label for="dt"></label>
+                <input type="datetime-local" name="dt" id="alarm">
+                <!-- <input type="datetime" name="dt" id="alarm" placeholder="Enter the date and time in the format: yyyy-mm-dd hh:mm:ss"> -->
+                <br>
+                <span id="time_left"></span>
+                <br>
+                <input type="submit" value="Set Alarm" id="alarm_sub">
+                <br><br>
+                <button id="snooze">Snooze</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".world_container_innerdiv"), {
+            max: 25,
+            speed: 400
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".world_container_innerdiv"));
+    </script>
+    <script src="js_clock.js"></script>
+
+</body>
+
+</html>
